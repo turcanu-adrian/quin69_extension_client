@@ -7,7 +7,7 @@
 		"service_worker": "background.js"
 	},
 	"permissions": ["notifications", "alarms", "storage"],
-	"host_permissions": ["http://localhost:3000/"],
+	"host_permissions": ["https://quin69-extension.herokuapp.com/"],
 	"action": {
 		"default_icon": {
 		  "32": "/images/painchamp32.png",

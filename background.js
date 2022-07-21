@@ -3,13 +3,13 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.alarms.create('testAlarm', {
-	periodInMinutes: 0.1
+	periodInMinutes: 1
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "testAlarm") {
 		console.log("ALARM ACTIVATED! FETCHING DATA...");
-		fetch("http://localhost:3000/") 
+		fetch("https://quin69-extension.herokuapp.com/") 
 			.then(response=>response.text()) 
 			.then(data=>{
 				if (data!=""){
